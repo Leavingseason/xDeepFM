@@ -5,7 +5,7 @@ import tensorflow as tf
 import sys
 from utils.log import Log
 
-yaml = sys.argv[1]
+#yaml = sys.argv[1]
 
 
 
@@ -174,7 +174,7 @@ def main():
     # flag = True
     util.check_tensorflow_version()
     util.check_and_mkdir()
-    util.TRAIN_YAML = yaml
+    #util.TRAIN_YAML = yaml
     config = load_yaml()
     check_config(config)
     hparams = create_hparams(config)

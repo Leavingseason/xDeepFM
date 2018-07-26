@@ -2,23 +2,23 @@
 import numpy as np
 import os, time, collections
 import tensorflow as tf
-from IO.iterator import FfmIterator, DinIterator, CCCFNetIterator
-from IO.din_cache import DinCache
+from IO.iterator import FfmIterator #, DinIterator, CCCFNetIterator
+#from IO.din_cache import DinCache
 from IO.ffm_cache import FfmCache
-from IO.cccfnet_cache import CCCFNetCache
-from src.deep_fm import DeepfmModel
-from src.deep_wide import DeepWideModel
-from src.fm import FmModel
-from src.dnn import DnnModel
-from src.opnn import OpnnModel
-from src.ipnn import IpnnModel
-from src.lr import LrModel
-from src.din import DinModel
-from src.cccfnet import CCCFModel
-from src.deepcross import DeepCrossModel
+#from IO.cccfnet_cache import CCCFNetCache
+#from src.deep_fm import DeepfmModel
+#from src.deep_wide import DeepWideModel
+#from src.fm import FmModel
+#from src.dnn import DnnModel
+#from src.opnn import OpnnModel
+#from src.ipnn import IpnnModel
+#from src.lr import LrModel
+#from src.din import DinModel
+#from src.cccfnet import CCCFModel
+#from src.deepcross import DeepCrossModel
 from src.exDeepFM import ExtremeDeepFMModel
 from src.CIN import CINModel
-from src.cross import CrossModel
+#from src.cross import CrossModel
 import utils.util as util
 import utils.metric as metric
 # from utils.log import Log
@@ -35,7 +35,8 @@ def create_train_model(model_creator, hparams, scope=None):
     with graph.as_default():
         # feed train file name, valid file name, or test file name
         filenames = tf.placeholder(tf.string, shape=[None])
-        src_dataset = tf.contrib.data.TFRecordDataset(filenames)
+        #src_dataset = tf.contrib.data.TFRecordDataset(filenames)
+        src_dataset = tf.data.TFRecordDataset(filenames)
 
         if hparams.data_format == 'ffm':
             batch_input = FfmIterator(src_dataset)
