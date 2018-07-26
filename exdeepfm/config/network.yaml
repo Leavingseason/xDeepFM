@@ -27,13 +27,13 @@ model:
 train:
     init_method: tnormal
     init_value : 0.01
-    embed_l2 : 0.0000
+    embed_l2 : 0.0001
     embed_l1 : 0.0000
-    layer_l2 : 0.0000
+    layer_l2 : 0.0001
     layer_l1 : 0.0000
-    cross_l2 : 0.0000
+    cross_l2 : 0.0001
     cross_l1 : 0.000
-    learning_rate : 0.001
+    learning_rate : 0.0001
     loss : log_loss
     optimizer : adam
     epochs : 10
@@ -43,5 +43,5 @@ train:
 #metric :'auc','logloss', 'group_auc'
 info:
     show_step : 1
-    save_epoch : 2
+    save_epoch : 5
     metrics : ['auc','logloss']
