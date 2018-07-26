@@ -1,6 +1,6 @@
 # xDeepFM
 
-A preview version of our submitted paper : eXtreme Deep Factorization Machine (xDeepFM) https://arxiv.org/abs/1803.05170 .
+Source code for our KDD 2018 paper : eXtreme Deep Factorization Machine (xDeepFM) https://arxiv.org/abs/1803.05170 .
 
 As stated previously, we are developing an opensource deep learning based factorization toolkit and all mentioned models will be released in a suitable way and time. Currently we only release the source code of xDeepFM model for reference. Some early works can be found here: https://github.com/Leavingseason/OpenLearning4DeepRecsys.
 
